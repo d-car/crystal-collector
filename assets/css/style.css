@@ -2,6 +2,25 @@ header {
     background-color: black;
 }
 
+.mainContent {
+    border: 3px solid black;
+    width: 960px;
+    height: 700px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+#instructionBox {
+    border: 3px solid black;
+    width: 930px;
+    height: 300px;
+    position: relative;
+    left: 15px;
+  
+
+}
+
 #logo {
     font: 'Georgia', Times, Times New Roman, serif;
     border-bottom: 2px solid #cccccc;
@@ -14,12 +33,19 @@ header {
 }
 
 #rando {
-    height: 30px;
-    width: 75px;
+    height: 150px;
+    width: 300px;
+    border: 3px solid black;
 }
 
 #stats {
+    border: 3px solid black;
     float: left;
-    height: 30px;
-    width: 15px;
+    height: 150px;
+    width: 100px;
+    position: relative;
+    left: 306px;
+    bottom: 156px;
+
+    
 }
