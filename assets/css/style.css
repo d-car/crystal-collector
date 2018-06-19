@@ -1,0 +1,25 @@
+header {
+    background-color: black;
+}
+
+#logo {
+    font: 'Georgia', Times, Times New Roman, serif;
+    border-bottom: 2px solid #cccccc;
+    width: 250px;
+    margin-left: 10%;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    background-color: #4aaaa5;
+}
+
+#rando {
+    height: 30px;
+    width: 75px;
+}
+
+#stats {
+    float: left;
+    height: 30px;
+    width: 15px;
+}
