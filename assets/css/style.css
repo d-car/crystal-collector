@@ -1,5 +1,5 @@
 header {
-    background-color: black;
+    border: 3px solid black;
 }
 
 .mainContent {
@@ -8,15 +8,16 @@ header {
     height: 700px;
     margin-left: 25%;
     margin-right: 25%;
-    text-align: center;
+    
 }
 
 #instructionBox {
     border: 3px solid black;
     width: 930px;
-    height: 300px;
+    height: 150px;
     position: relative;
     left: 15px;
+    margin-top: 25px;
   
 
 }
@@ -36,16 +37,29 @@ header {
     height: 150px;
     width: 300px;
     border: 3px solid black;
+    position: relative;
+    left: 100px;
 }
 
-#stats {
+#scoreCounter {
     border: 3px solid black;
     float: left;
     height: 150px;
-    width: 100px;
+    width: 300px;
     position: relative;
-    left: 306px;
+    left: 556px;
     bottom: 156px;
 
     
+}
+
+#crystalBox {
+    width: 960px;
+    height: 300px;
+  
+    border: 2px solid black'
+} 
+
+#crystal-4 {
+    float: left;
 }
