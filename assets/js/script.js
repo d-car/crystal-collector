@@ -9,47 +9,52 @@ var compNumber = Math.floor(Math.random() * (102)) + 19;
 function randoNumber()
 {
     compNumber
-    return compNumber
+        return compNumber
 
 }
 
 function display()
 {
-    $("#rando").text("Number to Guess: " + randoNumber());
+    $("#rando").text("Number to Guess: " + compNumber);
     $("#scoreCounter").text("Crystal Count: " + count);  
 }
 
+
+function resetCrystals() {
+    $(".crystal-image").each(function(){
+        $(this).attr("data-crystalvalue", Math.floor(Math.random() * crystalNumber.length));    
+
+    })
+}
 
 
 function runGame() 
 {
     display();
     
-    var compNumber = randoNumber();
+    // var compNumber = randoNumber();
+    // $("#rando").text("Number to Guess: " + compNumber);
+    // $("#scoreCounter").text("Crystal Count: " + count);
     $("#wins").text("Wins: " + wins);
     $("#loss").text("Losses: " + loss);
 
-    for (var i = 0; i < 4; i++) 
-    {
+    for (var i = 0; i < 4; i++) {
         
-    var crystalPic = $("<img>");
-    crystalPic.addClass("crystal-image");
-    crystalPic.attr("src", "../crystal-collector/assets/images/crystal1.jpg");
-    
-    function randoCrystal()
-        {
-        crystalPic.attr("data-crystalvalue", Math.floor(Math.random() * crystalNumber.length));    
+        var crystalPic = $("<img>");
+        crystalPic.addClass("crystal-image");
+        crystalPic.attr("src", "../crystal-collector/assets/images/crystal1.jpg");
+        
+        function randoCrystal(){
+            crystalPic.attr("data-crystalvalue", Math.floor(Math.random() * crystalNumber.length));    
         }
-    
-    randoCrystal();
-    
-    $("#crystalBox").append(crystalPic);
+        
+        randoCrystal();
+        
+        $("#crystalBox").append(crystalPic);
   
     }
 
-    $(".crystal-image").on("click", function() 
-    
-    {
+    $(".crystal-image").on("click", function() {
         var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
 
@@ -59,25 +64,25 @@ function runGame()
 
         // alert(crystalValue);
 
-    if (compNumber === count) {
-        alert("You Win!");
-        $("#wins").text("Wins: " + (wins ++));
-        reset();
-        // display();
-    } else if (compNumber < count) {
-        alert("You Lose!");
-        $("#loss").text("Losses: " + (loss ++));
-        reset();
-        // display();
+        if (compNumber === count) {
+            alert("You Win!");
+            $("#wins").text("Wins: " + wins++);
+            reset();
+            display();
+        } else if (compNumber < count) {
+            alert("You Lose!");
+            $("#loss").text("Losses: " + loss++);
+            reset();
+            display();
         }
-    function reset()
-        {
-        count = 0;
-        display();
         
-
-
-        
+        function reset() {
+            compNumber;
+            count = 0;
+            crystalValue = 0;
+            crystalPic.attr("data-crystalvalue", 0);
+            resetCrystals();
+            display();
         }
     
         
