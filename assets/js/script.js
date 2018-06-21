@@ -26,9 +26,8 @@ function runGame()
     display();
     
     var compNumber = randoNumber();
-    // $("#rando").text("Number to Guess: " + compNumber);
-    // $("#scoreCounter").text("Crystal Count: " + count);
     $("#wins").text("Wins: " + wins);
+    $("#loss").text("Losses: " + loss);
 
     for (var i = 0; i < 4; i++) 
     {
@@ -62,23 +61,19 @@ function runGame()
 
     if (compNumber === count) {
         alert("You Win!");
-        wins++;
+        $("#wins").text("Wins: " + (wins ++));
         reset();
         // display();
     } else if (compNumber < count) {
         alert("You Lose!");
-        loss++;
+        $("#loss").text("Losses: " + (loss ++));
         reset();
         // display();
         }
     function reset()
         {
         count = 0;
-        crystalValue = 0;
-        crystalPic.attr("data-crystalvalue", 0);
-        randoNumber();
-        randoCrystal();
-        display();
+        
         }
     
         
