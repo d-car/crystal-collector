@@ -29,11 +29,9 @@ function resetCrystals() {
 }
 
 function resetComp() {
-    (function(){
-        compNumber = Math.floor(Math.random() * (102)) + 19;   
-
-    })
-}
+   
+        compNumber = Math.floor(Math.random() * (102)) + 19;  
+ }
 
 // this is where all functions of the game happen
 function runGame() 
@@ -93,7 +91,7 @@ function runGame()
             crystalValue = 0;
             crystalPic.attr("data-crystalvalue", 0);
             resetCrystals();
-            // resetComp();
+            resetComp();
             display();
         }
     
