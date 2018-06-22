@@ -14,16 +14,20 @@ header {
     margin-right: 25%;   
 }
 
-.crystalImage {
-    float: left;
-}
+/* .crystal-image {
+    position: relative;
+    right: 20px;
+    
+} */
 
 #instructionBox {
+    border: 2px solid blue;
     text-align: center;
     width: 930px;
     margin-top: 25px;
     margin-left: 15px;
     background-color: #fff;
+    padding: 10px;
 }
 
 #logo {
@@ -33,10 +37,12 @@ header {
     padding: 15px;
     position: relative;
     margin-left: 43%;
-
 }
 
 #rando {
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid blue;
     height: 150px;
     width: 300px;
     position: relative;
@@ -46,6 +52,9 @@ header {
 }
 
 #scoreCounter {
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid blue;
     text-align: center;
     float: left;
     height: 150px;
@@ -53,23 +62,26 @@ header {
     position: relative;
     left: 556px;
     bottom: 156px;
-    background-color: #fff;
-
-    
+    background-color: #fff;    
 }
 
 #wins {
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid blue;
     height: 150px;
     width: 300px;
     position: relative;
     left: 100px;
     margin-top: 10px;
     text-align: center;
-    background-color: #fff;
-    
+    background-color: #fff;    
 }
 
 #loss {
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid blue;
     text-align: center;
     float: left;
     height: 150px;
@@ -78,15 +90,28 @@ header {
     left: 556px;
     bottom: 166px;
     margin-top: 10px;
-    background-color: #fff;
-
-    
+    background-color: #fff;   
 }
 
 #crystalBox {
-    width: 960px;
+    width: 100%;
     height: 300px;
     margin-top: 10px;
-    border: 2px solid black;
+    border: 2px solid blue;
     background-color: #fff;
 } 
+
+.footer {
+    height: 50px;
+}
+
+div.footer-content {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 35px;
+    background-color: #fff;
+    height: 25px;
+    border-top: 2px solid blue;
+
+}

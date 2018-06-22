@@ -17,7 +17,9 @@ function randoNumber()
 function display()
 {
     $("#rando").text("Number to Guess: " + compNumber);
-    $("#scoreCounter").text("Crystal Count: " + count);  
+    $("#scoreCounter").text("Crystal Count: " + count);
+    $("#wins").text("Wins: " + wins);
+    $("#loss").text("Losses: " + loss);  
 }
 
 // this function is used in the reset function to reset the random values of the crystals upon a winning or losing
@@ -38,8 +40,8 @@ function runGame()
 {
     display();
     
-    $("#wins").text("Wins: " + wins);
-    $("#loss").text("Losses: " + loss);
+    // $("#wins").text("Wins: " + wins);
+    // $("#loss").text("Losses: " + loss);
 
 
     // this for loop creates the crystal picture divs, assigns a data value to each, and appends them to the document
